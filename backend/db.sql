@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS sos_mis_db;
+
+
+USE sos_mis;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) UNIQUE,
+    hash_password VARCHAR(100) NOT NULL
+)
